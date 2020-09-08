@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MessageApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_description_image">Is an image</string>
+    <string name="title_1">En todo momento</string>
+    <string name="description_lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</string>
 </resources>
