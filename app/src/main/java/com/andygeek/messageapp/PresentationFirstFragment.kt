@@ -6,15 +6,18 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.viewpager.widget.PagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.andygeek.messageapp.databinding.FragmentPresentationFirstBinding
 
 
 class PresentationFirstFragment : Fragment() {
 
+
     lateinit var binding : FragmentPresentationFirstBinding
     lateinit var introDesign : Animation
-    lateinit var introBack1 : Animation
     lateinit var mContext : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,8 +40,19 @@ class PresentationFirstFragment : Fragment() {
 
         introDesign = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_design)
 
-
-
+        val nn = container as ViewPager
+        nn.addOnPageChangeListener( object : ViewPager.SimpleOnPageChangeListener(){
+            override fun onPageSelected(position: Int) {
+                when(position){
+                    0 -> {
+                        binding.imgIntroDesign1.startAnimation(introDesign)
+                    }
+                    1 -> {
+                        binding.imgIntroDesign1.visibility = View.INVISIBLE
+                    }
+                }
+            }
+        })
 
         return binding.root
     }
@@ -46,9 +60,12 @@ class PresentationFirstFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        binding.imgIntroDesign1.animation = introDesign
+
     }
 
+    public fun doSomething(){
+        binding.imgIntroDesign1.animation = introDesign
+    }
 
     companion object {
         @JvmStatic
@@ -59,4 +76,5 @@ class PresentationFirstFragment : Fragment() {
                 }
             }
     }
+
 }

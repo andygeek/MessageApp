@@ -15,6 +15,9 @@ class PresentationAdapter(manager: FragmentManager) : FragmentPagerAdapter( mana
         return num_items
     }
 
+
+
+
     override fun getItem(position: Int): Fragment {
         when(position){
             0 -> return PresentationFirstFragment.newInstance()
