@@ -10,6 +10,8 @@ import com.andygeek.messageapp.databinding.FragmentPresentationThirdBinding
 
 class PresentationThirdFragment : Fragment() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -23,6 +25,9 @@ class PresentationThirdFragment : Fragment() {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_presentation_third, container, false)
         val binding = DataBindingUtil.inflate<FragmentPresentationThirdBinding>(inflater,R.layout.fragment_presentation_third,container,false)
+
+
+
         return binding.root
     }
 

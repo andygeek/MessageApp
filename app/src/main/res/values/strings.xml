@@ -5,4 +5,5 @@
     <string name="content_description_image">Is an image</string>
     <string name="title_1">En todo momento</string>
     <string name="description_lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</string>
+    <string name="button_intro">Continuar</string>
 </resources>

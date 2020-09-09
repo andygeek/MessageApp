@@ -4,28 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".PresentationFirstFragment">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/intro_back_6"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="70dp"/>
+
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:src="@drawable/intro_back_2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="-200dp"
+                android:layout_marginTop="-200dp"/>
+
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginRight="-200dp"
+                android:layout_marginBottom="-200dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/intro_back_3" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/intro_back_1"/>
+                android:src="@drawable/intro_back_1" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/intro_design_1"/>
+                android:src="@drawable/intro_design_1" />
 
         </RelativeLayout>
 
@@ -61,5 +102,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </layout>
