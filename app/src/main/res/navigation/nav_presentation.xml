@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_presentation"
+    app:startDestination="@id/presentationFirstFragment">
+
+    <fragment
+        android:id="@+id/presentationFirstFragment"
+        android:name="com.andygeek.messageapp.PresentationFirstFragment"
+        android:label="fragment_presentation_first"
+        tools:layout="@layout/fragment_presentation_first" />
+    <fragment
+        android:id="@+id/presentationSecondFragment"
+        android:name="com.andygeek.messageapp.PresentationSecondFragment"
+        android:label="fragment_presentation_second"
+        tools:layout="@layout/fragment_presentation_second" />
+    <fragment
+        android:id="@+id/presentationThirdFragment2"
+        android:name="com.andygeek.messageapp.PresentationThirdFragment"
+        android:label="fragment_presentation_third"
+        tools:layout="@layout/fragment_presentation_third" />
+</navigation>

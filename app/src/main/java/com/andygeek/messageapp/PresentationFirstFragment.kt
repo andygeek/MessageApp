@@ -2,17 +2,15 @@ package com.andygeek.messageapp
 
 import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.databinding.DataBindingUtil
-import com.andygeek.messageapp.databinding.FragmentPresentatioFirstBinding
+import com.andygeek.messageapp.databinding.FragmentPresentationFirstBinding
 
 
-class PresentatioFirstFragment : Fragment() {
+class PresentationFirstFragment : Fragment() {
 
     lateinit var introDesign1 : Animation
     lateinit var introBack1 : Animation
@@ -34,26 +32,27 @@ class PresentatioFirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding= DataBindingUtil.inflate<FragmentPresentatioFirstBinding>(inflater, R.layout.fragment_presentatio_first, container, false)
+        val binding= DataBindingUtil.inflate<FragmentPresentationFirstBinding>(inflater, R.layout.fragment_presentation_first, container, false)
 
         introDesign1 = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_design_1)
         introBack1 = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_back_1)
 
 
-        binding.imgDesg1.animation = introDesign1
-        binding.imgBack1.animation = introBack1
-        binding.imgBack2.animation = introBack1
-        binding.imgBack3.animation = introBack1
-        binding.imgBack4.animation = introBack1
-        binding.imgBack5.animation = introBack1
+
+
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
     }
 
     companion object {
         @JvmStatic
         fun newInstance() =
-            PresentatioFirstFragment().apply {
+            PresentationFirstFragment().apply {
                 arguments = Bundle().apply {
 
                 }
