@@ -54,7 +54,7 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_marginBottom="50dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintBottom_toTopOf="@+id/txt_intro_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
@@ -72,7 +72,7 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout3"
+            android:id="@+id/txt_intro_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="180dp"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="@string/title_1"
+                android:text="@string/title_intro_1"
                 android:textSize="20sp" />
 
             <TextView
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat"
-                android:text="@string/description_lorem"
+                android:text="@string/description_intro_1"
                 android:textAlignment="center"
                 android:textSize="17sp" />
 

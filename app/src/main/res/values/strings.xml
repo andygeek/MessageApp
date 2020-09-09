@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">MessageApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="content_description_image">Is an image</string>
-    <string name="title_1">En todo momento</string>
-    <string name="description_lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</string>
-    <string name="button_intro">Continuar</string>
+<string name="app_name">MessageApp</string>
+<string name="hello_blank_fragment">Hello blank fragment</string>
+<string name="content_description_image">Is an image</string>
+<string name="title_intro_1">En todo momento</string>
+<string name="title_intro_2">Con tus amigos</string>
+<string name="title_intro_3">Comparte tus ideas</string>
+<string name="description_intro_1">Úsalo en cualquier momento del día y desde cualquier lugar.</string>
+<string name="description_intro_2">Úsalo con tus amigos sin importar donde estén.</string>
+<string name="description_intro_3">Genera ideas y compártelas a través de tu comunidad.</string>
+<string name="button_intro">Continuar</string>
 </resources>

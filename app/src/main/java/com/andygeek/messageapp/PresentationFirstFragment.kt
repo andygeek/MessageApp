@@ -6,11 +6,13 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.andygeek.messageapp.databinding.FragmentPresentationFirstBinding
+import com.andygeek.messageapp.databinding.FragmentPresentationSecondBinding
 
 
 class PresentationFirstFragment : Fragment() {
@@ -36,19 +38,23 @@ class PresentationFirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_presentation_first, container, false)
+        val binding = DataBindingUtil.inflate<FragmentPresentationFirstBinding>(inflater, R.layout.fragment_presentation_first, container, false)
 
         introDesign = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_design)
 
-        val nn = container as ViewPager
-        nn.addOnPageChangeListener( object : ViewPager.SimpleOnPageChangeListener(){
+        val viewPager = container as ViewPager
+        viewPager.addOnPageChangeListener( object : ViewPager.SimpleOnPageChangeListener(){
             override fun onPageSelected(position: Int) {
                 when(position){
                     0 -> {
+                        binding.imgIntroDesign1.visibility = View.VISIBLE
+                        binding.txtIntro1.visibility = View.VISIBLE
+                        binding.txtIntro1.startAnimation(introDesign)
                         binding.imgIntroDesign1.startAnimation(introDesign)
                     }
                     1 -> {
                         binding.imgIntroDesign1.visibility = View.INVISIBLE
+                        binding.txtIntro1.visibility = View.INVISIBLE
                     }
                 }
             }
@@ -57,15 +63,6 @@ class PresentationFirstFragment : Fragment() {
         return binding.root
     }
 
-
-    override fun onStart() {
-        super.onStart()
-
-    }
-
-    public fun doSomething(){
-        binding.imgIntroDesign1.animation = introDesign
-    }
 
     companion object {
         @JvmStatic
