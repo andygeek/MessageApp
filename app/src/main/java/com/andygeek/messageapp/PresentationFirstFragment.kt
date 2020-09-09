@@ -12,7 +12,8 @@ import com.andygeek.messageapp.databinding.FragmentPresentationFirstBinding
 
 class PresentationFirstFragment : Fragment() {
 
-    lateinit var introDesign1 : Animation
+    lateinit var binding : FragmentPresentationFirstBinding
+    lateinit var introDesign : Animation
     lateinit var introBack1 : Animation
     lateinit var mContext : Context
 
@@ -32,11 +33,9 @@ class PresentationFirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding= DataBindingUtil.inflate<FragmentPresentationFirstBinding>(inflater, R.layout.fragment_presentation_first, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_presentation_first, container, false)
 
-        introDesign1 = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_design_1)
-        introBack1 = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_back_1)
-
+        introDesign = AnimationUtils.loadAnimation(mContext, R.anim.anim_intro_design)
 
 
 
@@ -44,10 +43,12 @@ class PresentationFirstFragment : Fragment() {
         return binding.root
     }
 
-    override fun onResume() {
-        super.onResume()
 
+    override fun onStart() {
+        super.onStart()
+        binding.imgIntroDesign1.animation = introDesign
     }
+
 
     companion object {
         @JvmStatic

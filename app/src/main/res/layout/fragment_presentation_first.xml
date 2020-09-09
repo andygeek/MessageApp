@@ -64,6 +64,7 @@
                 android:src="@drawable/intro_back_1" />
 
             <ImageView
+                android:id="@+id/img_intro_design_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/intro_design_1" />
